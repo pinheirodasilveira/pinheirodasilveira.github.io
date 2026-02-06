@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reforma Tributária e Planejamento Tributário | Pinheiro da Silveira Advocacia</title>
+<meta name="theme-color" content="#0a1628">
+<style>
+
+:root {
+  --blue:#0a1628;
+  --blue2:#111c33;
+  --black:#05080f;
+  --gold:#d4af37;
+  --white:#ffffff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--blue);color:var(--white)}
+
+/* Force link colors (avoid purple visited) */
+a, a:visited {color: var(--white);}
+a:hover {color: var(--gold);}
+
+/* Header */
+header {
+  position:fixed; top:0; left:0; width:100%; z-index:50;
+  background: rgba(5,8,15,.88);
+  border-bottom:1px solid rgba(212,175,55,.55);
+}
+.nav {
+  max-width:1200px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:16px 20px;
+  gap:18px;
+}
+.brand {
+  display:flex; align-items:center; gap:14px; min-width:260px;
+}
+.brand img {height:54px; width:auto; display:block}
+.brand .title {
+  font-weight:700; letter-spacing:1px; line-height:1.05;
+}
+.brand .subtitle {
+  font-size:12px; letter-spacing:3px; color:var(--gold); margin-top:6px;
+}
+
+.nav ul {
+  list-style:none; display:flex; gap:26px; margin:0; padding:0; flex-wrap:wrap;
+}
+.nav a {
+  text-decoration:none; font-size:13px; letter-spacing:1px;
+  padding:10px 0;
+  border-bottom:2px solid transparent;
+}
+.nav a:hover {
+  border-bottom-color: var(--gold);
+}
+
+/* Hero */
+.hero {
+  height:100vh;
+  min-height:620px;
+  position:relative;
+  background: url('assets/hero.jpg') center/cover no-repeat;
+}
+.hero video {
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover;
+}
+.hero::after {
+  content:"";
+  position:absolute; inset:0;
+  background: rgba(5,8,15,.55);
+}
+.hero-content {
+  position:relative; z-index:2;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:120px 20px 40px;
+}
+.hero h1 {
+  margin:0;
+  font-size:56px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.hero h1{color:var(--gold);text-shadow:0 2px 18px rgba(0,0,0,.55)}
+.hero h1 span{display:block;margin-top:14px;font-size:16px;letter-spacing:3px;color:rgba(255,255,255,.82)}
+.hero-stack{max-width:920px;padding:0 18px;text-align:center}
+.hero-logo{width:min(520px,85vw);height:auto;display:block;margin:0 auto 22px auto;filter:drop-shadow(0 6px 28px rgba(0,0,0,.55))}
+.hero h1 span {
+  display:block;
+  font-size:16px;
+  color:var(--gold);
+  letter-spacing:4px;
+  margin-top:16px;
+}
+.hero .cta {
+  margin-top:28px;
+  display:flex;
+  gap:14px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.btn {
+  display:inline-block;
+  padding:12px 18px;
+  border:1px solid rgba(212,175,55,.75);
+  text-decoration:none;
+  letter-spacing:1px;
+  font-size:13px;
+  background: rgba(10,22,40,.55);
+}
+.btn:hover {
+  background: rgba(212,175,55,.14);
+}
+
+section {
+  padding:92px 20px;
+}
+.container {
+  max-width:1100px;
+  margin:0 auto;
+}
+h2 {
+  margin:0 0 22px;
+  color: var(--gold);
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-size:18px;
+}
+.block {
+  background: linear-gradient(180deg, rgba(17,28,51,.92), rgba(5,8,15,.96));
+  border:1px solid rgba(212,175,55,.45);
+  padding:28px;
+}
+.grid {
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:18px;
+}
+@media (max-width: 980px) {
+  .grid {grid-template-columns: 1fr;}
+  .hero h1 {font-size:40px;}
+  .brand {min-width:auto;}
+}
+
+footer {
+  background: var(--black);
+  border-top:1px solid rgba(212,175,55,.55);
+  padding:28px 20px;
+  text-align:center;
+  font-size:12px;
+  letter-spacing:.3px;
+  color: rgba(255,255,255,.85);
+}
+.notice {
+  margin-top:10px;
+  color: rgba(255,255,255,.75);
+}
+.muted{color:rgba(255,255,255,.82);max-width:880px;margin:0 auto 22px auto;line-height:1.55}
+.pub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:18px}
+.pub-card{display:flex;flex-direction:column;border-radius:18px;overflow:hidden;border:1px solid rgba(212,175,55,.22);background:linear-gradient(180deg, rgba(5,8,15,.72), rgba(17,28,51,.55));box-shadow:0 10px 28px rgba(0,0,0,.25)}
+.pub-thumb{height:160px;background:center/cover no-repeat;filter:saturate(.9) contrast(1.05)}
+.pub-body{padding:16px 16px 18px 16px}
+.pub-kicker{color:rgba(255,255,255,.75);letter-spacing:2px;text-transform:uppercase;font-size:12px}
+.pub-title{margin-top:8px;color:var(--gold);font-weight:700;line-height:1.25}
+.pub-meta{margin-top:10px;color:rgba(255,255,255,.72);font-size:13px}
+.pub-card:hover{transform:translateY(-2px);transition:.15s ease; border-color:rgba(212,175,55,.45)}
+@media (max-width: 980px){.pub-grid{grid-template-columns:1fr}}
+
+
+/* Article-specific refinements */
+.article-wrap {
+  padding-top: 110px;
+}
+.article-card {
+  background: linear-gradient(180deg, rgba(17,28,51,.92), rgba(5,8,15,.96));
+  border:1px solid rgba(212,175,55,.45);
+  padding:28px;
+}
+.article-card h1 {
+  margin:0 0 10px;
+  font-size:22px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color: var(--gold);
+}
+.article-card h3 {
+  margin:10px 0 18px;
+  font-size:13px;
+  letter-spacing:.6px;
+  color: rgba(255,255,255,.86);
+  font-weight:400;
+}
+.article-card p {
+  margin: 0 0 12px;
+  line-height: 1.75;
+  color: rgba(255,255,255,.92);
+  font-size: 13px;
+}
+.article-card ul {
+  margin: 8px 0 14px 18px;
+  color: rgba(255,255,255,.92);
+  line-height: 1.75;
+  font-size: 13px;
+}
+.breadcrumb {
+  max-width:1100px; margin:0 auto;
+  padding: 0 20px 10px;
+  color: rgba(255,255,255,.8);
+  font-size: 12px;
+  letter-spacing:.3px;
+}
+.breadcrumb a, .breadcrumb a:visited {
+  color: rgba(255,255,255,.92);
+  text-decoration:none;
+}
+.breadcrumb a:hover {
+  color: var(--gold);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="brand">
+      <img src="assets/logo.png" alt="Pinheiro da Silveira Advocacia">
+      <div>
+        <div class="title">PINHEIRO DA SILVEIRA</div>
+        <div class="subtitle">ADVOCACIA</div>
+      </div>
+    </div>
+    <ul>
+      <li><a href="index.html#home">INÍCIO</a></li>
+      <li><a href="index.html#escritorio">NOSSO ESCRITÓRIO</a></li>
+      <li><a href="index.html#areas">ÁREAS DE ATUAÇÃO</a></li>
+      <li><a href="index.html#contato">CONTATO</a></li>
+    </ul>
+  </div>
+</header>
+
+<div class="article-wrap">
+  <div class="breadcrumb">
+    <a href="index.html#home">Início</a> / <a href="index.html#artigos">Artigos</a> / Reforma Tributária e Planejamento Tributário
+  </div>
+
+  <section>
+    <div class="container">
+      <div class="article-card">
+        <h1>Reforma Tributária e Planejamento Tributário</h1>
+        <h3>Adaptação, segurança jurídica e organização fiscal no cenário de transição</h3>
+        <p><strong>1. Introdução</strong></p>
+<p>A Reforma Tributária redesenha a tributação sobre o consumo e traz impactos relevantes para empresas e contribuintes.</p>
+<p>A transição é gradual e demanda acompanhamento legislativo e decisões tecnicamente fundamentadas para evitar riscos fiscais.</p>
+<p><strong>2. Panorama geral</strong></p>
+<p>A reforma busca simplificação e previsibilidade, substituindo tributos e reorganizando a incidência, com efeitos econômicos e contratuais.</p>
+<p><strong>3. Desafios do período de transição</strong></p>
+<p>A coexistência de regras exige adaptação de sistemas, revisão de processos e atenção aos efeitos de créditos, preços e obrigações acessórias.</p>
+<p><strong>4. Planejamento tributário lícito</strong></p>
+<p>Organiza atividades e operações para eficiência fiscal dentro da legalidade, sem confusão com sonegação ou ocultação de fatos.</p>
+<p><strong>5. Planejamento em cenário de mudança</strong></p>
+<p>Requer análise comparativa entre regimes, avaliação de impactos financeiros, revisão de modelos operacionais e adaptação progressiva.</p>
+<p><strong>6. Atuação consultiva</strong></p>
+<p>A consultoria orienta incidências, obrigações e decisões estratégicas, evitando improvisações e contribuindo para conformidade.</p>
+<p><strong>7. Contratos e preços</strong></p>
+<p>Cláusulas de repasse tributário e formação de preços podem exigir revisão, especialmente em contratos de longo prazo, para evitar desequilíbrios.</p>
+<p><strong>8. Contencioso tributário</strong></p>
+<p>Controvérsias interpretativas tendem a surgir. Organização documental e planejamento aumentam segurança na atuação administrativa e judicial.</p>
+<p><strong>9. Governança tributária</strong></p>
+<p>Transparência, documentação e sustentação jurídica reduzem riscos, favorecem previsibilidade e robustecem a conformidade fiscal.</p>
+<p><strong>10. Considerações finais</strong></p>
+<p>A adaptação ao novo cenário demanda planejamento lícito e acompanhamento contínuo. A atuação preventiva contribui para segurança jurídica e sustentabilidade dos negócios.</p>
+        <p><em>Observação ética: este conteúdo possui caráter exclusivamente informativo, não constituindo promessa de resultado ou captação de clientela, em conformidade com o Código de Ética e Disciplina da OAB.</em></p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  Atuação jurídica técnica e responsável, orientada pela ética, pela legalidade e pela eficiência na condução de demandas judiciais e extrajudiciais, nos termos do Código de Ética e Disciplina da OAB.
+  <div class="notice">Não constitui promessa de resultado, captação de clientela ou oferta indiscriminada de serviços.</div>
+  <div class="notice">© <span id="year"></span> Pinheiro da Silveira Advocacia</div>
+</footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
