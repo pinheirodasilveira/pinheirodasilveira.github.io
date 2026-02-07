@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
 <title>Pinheiro da Silveira Advocacia</title>
-<meta name="theme-color" content="#0a1628">
+<meta content="#0a1628" name="theme-color"/>
 <style>
 :root {
   --blue:#0a1628;
@@ -172,318 +173,200 @@ footer {
 .pub-meta{margin-top:10px;color:rgba(255,255,255,.72);font-size:13px}
 .pub-card:hover{transform:translateY(-2px);transition:.15s ease; border-color:rgba(212,175,55,.45)}
 @media (max-width: 980px){.pub-grid{grid-template-columns:1fr}}
+
+
+/* --- Ajustes solicitados (menu + áreas + cartões) --- */
+.nav-links{display:flex;gap:26px;align-items:center;flex-wrap:wrap;}
+.nav-links li a{letter-spacing:.5px;}
+/* Evita "grudar" itens longos no topo */
+.nav-links li{white-space:nowrap;}
+/* Títulos das áreas em dourado */
+.area-title{color:var(--gold);font-weight:800;text-transform:uppercase;letter-spacing:.6px;}
+/* Título do tópico (bolinha) em dourado e destaque */
+.bullet-title-gold{color:var(--gold);font-weight:800;}
+/* Mantém texto do parágrafo em branco (legível no azul) */
+.block p{color:rgba(255,255,255,.92);font-weight:400;}
+/* Cards – layout consistente */
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:18px;}
+@media(max-width:1100px){.cards{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:680px){.cards{grid-template-columns:1fr;}}
+.card{border:1px solid rgba(218,182,86,.55);background:rgba(0,0,0,.12);border-radius:14px;padding:18px;transition:transform .2s ease, box-shadow .2s ease;}
+.card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.25);}
+.card h3{color:var(--gold);margin:0 0 8px 0;font-size:1.05rem;line-height:1.3;}
+.card p{margin:0;color:rgba(255,255,255,.9);line-height:1.5;font-size:.96rem;}
+.section-intro{max-width:980px;color:rgba(255,255,255,.9);line-height:1.6;margin:10px 0 0 0;}
 </style>
 </head>
 <body>
-
 <header>
-  <div class="nav">
-    <div class="brand">
-      <img src="assets/logo-wide.png" alt="Pinheiro da Silveira Advocacia">
-      <div>
-        <div class="title">PINHEIRO DA SILVEIRA</div>
-        <div class="subtitle">ADVOCACIA</div>
-      </div>
-    </div>
-    <ul>
-      <li><a href="#home">INÍCIO</a></li>
-      <li><a href="#escritorio">NOSSO ESCRITÓRIO</a></li>
-      <li><a href="#areas">ÁREAS DE ATUAÇÃO</a></li>
-      <li><a href="#contato">CONTATO</a></li>
-    </ul>
-  </div>
+<div class="nav">
+<div class="brand">
+<img alt="Pinheiro da Silveira Advocacia" src="assets/logo-wide.png"/>
+<div>
+<div class="title">PINHEIRO DA SILVEIRA</div>
+<div class="subtitle">ADVOCACIA</div>
+</div>
+</div>
+<ul class="nav-links">
+<li><a href="#home">INÍCIO</a></li>
+<li><a href="#escritorio">NOSSO ESCRITÓRIO</a></li><li><a href="#atendimento">COMO FUNCIONA O ATENDIMENTO</a></li>
+<li><a href="#areas">ÁREAS DE ATUAÇÃO</a></li>
+<li><a href="#artigos">ARTIGOS E CONTEÚDOS INSTITUCIONAIS</a></li>
+<li><a href="#contato">CONTATO</a></li>
+</ul>
+</div>
 </header>
-
 <section class="hero" id="home">
-  <!-- Se você adicionar o arquivo assets/hero.mp4, o vídeo será exibido automaticamente (em navegadores compatíveis). -->
-  <video autoplay muted loop playsinline poster="assets/hero.jpg">
-    <source src="assets/hero.mp4" type="video/mp4">
-  </video>
-
-  <div class="hero-content">
-    <div class="hero-stack">
-      <img class="hero-logo" src="assets/logo-wide.png" alt="Pinheiro da Silveira Advocacia">
-      <h1>PINHEIRO DA SILVEIRA ADVOCACIA
+<!-- Se você adicionar o arquivo assets/hero.jpg, o vídeo será exibido automaticamente (em navegadores compatíveis). -->
+<video autoplay="" loop="" muted="" playsinline="" poster="assets/hero.jpg">
+<source src="assets/hero.jpg" type="video/mp4"/>
+</video>
+<div class="hero-content">
+<div class="hero-stack">
+<img alt="Pinheiro da Silveira Advocacia" class="hero-logo" src="assets/logo-wide.png"/>
+<h1>PINHEIRO DA SILVEIRA ADVOCACIA
         <span>ATUAÇÃO JURÍDICA TÉCNICA E INSTITUCIONAL</span>
-      </h1>
-      <div class="cta">
-        <a class="btn" href="#contato">AGENDAMENTO MEDIANTE ANÁLISE PRÉVIA</a>
-        <a class="btn" href="#areas">CONHEÇA AS ÁREAS</a>
-      </div>
-    </div>
-  </div>
+</h1>
+<div class="cta">
+<a class="btn" href="#contato">FALE CONOSCO</a>
+<a class="btn" href="#areas">CONHEÇA AS ÁREAS</a>
+</div>
+</div>
+</div>
 </section>
-
-
-
 <section id="escritorio">
-  <div class="container">
-    <h2>NOSSO ESCRITÓRIO</h2>
-    <div class="block">
-      A Pinheiro da Silveira Advocacia é um escritório orientado pela atuação técnica, ética e responsável,
-      com foco na prestação de assessoria jurídica qualificada a pessoas físicas e jurídicas. O trabalho
-      desenvolvido é pautado pela análise criteriosa de cada demanda, pela organização eficiente das
-      informações e pela definição de estratégias jurídicas compatíveis com o caso concreto, sempre em
-      observância ao Estatuto da Advocacia, ao Código de Ética e Disciplina da OAB e à legislação vigente.
-      <br><br>
-      A atuação profissional é guiada por valores como independência técnica, confidencialidade,
-      transparência na comunicação e compromisso com a correta orientação do cliente quanto aos riscos,
-      possibilidades e limites jurídicos de cada situação apresentada. O atendimento ocorre mediante
-      agendamento, permitindo dedicação individualizada e condução responsável dos procedimentos
-      judiciais e extrajudiciais.
-      <br><br>
-      O escritório adota práticas de modernização e organização digital de seus fluxos internos,
-      utilizando ferramentas tecnológicas para gestão documental, acompanhamento processual e
-      comunicação segura. Essa estrutura contribui para a otimização de procedimentos, maior
-      previsibilidade de prazos e maior agilidade na condução das demandas, sem prejuízo da análise
-      técnica aprofundada que cada caso exige.
+<div class="container">
+<h2>NOSSO ESCRITÓRIO</h2>
+<div class="block">
+      O escritório <strong>Pinheiro da Silveira Advocacia</strong> atua de forma técnica e institucional, com foco na análise jurídica, orientação e condução de demandas administrativas e judiciais, sempre com observância às normas éticas e disciplinares da advocacia.
+      <br/><br/>
+      A atuação é pautada por estudo do caso, organização documental, definição de estratégia compatível com a legislação e a jurisprudência aplicáveis, além de acompanhamento diligente de prazos e comunicações processuais.
+      <br/><br/>
+      Este site tem finalidade estritamente <strong>informativa</strong>. Conteúdos e referências aqui disponibilizados não constituem promessa de resultado, nem substituem consulta individualizada, que depende das particularidades de cada situação.
     </div>
-  </div>
+</div>
 </section>
-
-
-
-
-
 <section id="areas">
-  <div class="container">
-    <h2>ÁREAS DE ATUAÇÃO</h2>
-    <div class="grid">
-
-      <div class="block">
-        <strong>Direito do Trabalho Empresarial</strong><br><br>
-
-        <strong>• Due Diligence Trabalhista</strong><br>
+<div class="container">
+<h2>ÁREAS DE ATUAÇÃO</h2>
+<div class="grid">
+<div class="block">
+<strong class="area-title">Direito do Trabalho Empresarial</strong><br/><br/>
+<span class="bullet-title bullet-title-gold">• Due Diligence Trabalhista</span><br/><br/>
         Análise técnica e sistemática das práticas trabalhistas da empresa, voltada à identificação de passivos ocultos,
         contingências e riscos decorrentes das relações de trabalho. A due diligence trabalhista é essencial em processos
         de reorganização societária, auditorias internas e avaliações estratégicas, permitindo decisões seguras e alinhadas
-        à legislação.<br><br>
-
-        <strong>• Compliance Trabalhista</strong><br>
+        à legislação.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Compliance Trabalhista</span><br/><br/>
         Atuação preventiva destinada à conformidade das rotinas empresariais com a legislação trabalhista, normas
         regulamentadoras e instrumentos coletivos. Envolve revisão de políticas internas, contratos e procedimentos,
-        promovendo segurança jurídica e previsibilidade.<br><br>
-
-        <strong>• Auditoria Trabalhista</strong><br>
+        promovendo segurança jurídica e previsibilidade.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Auditoria Trabalhista</span><br/><br/>
         Avaliação técnica das rotinas internas, documentos e obrigações trabalhistas, com identificação de inconformidades
-        e recomendações de ajustes preventivos, sempre dentro dos limites legais.<br><br>
-
-        <strong>• Atuação Consultiva</strong><br>
+        e recomendações de ajustes preventivos, sempre dentro dos limites legais.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Atuação Consultiva</span><br/><br/>
         Orientação jurídica contínua para suporte às decisões empresariais relacionadas à contratação, gestão de pessoas,
-        terceirização, remuneração e encerramento de vínculos.<br><br>
-
-        <strong>• Atuação Contenciosa</strong><br>
+        terceirização, remuneração e encerramento de vínculos.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Atuação Contenciosa</span><br/><br/>
         Representação técnica da empresa em reclamações trabalhistas e procedimentos administrativos, com definição de
         estratégias jurídicas adequadas ao caso concreto.
       </div>
-
-      <div class="block">
-        <strong>Direito Tributário</strong><br><br>
-
-        <strong>• Consultoria Tributária</strong><br>
+<div class="block">
+<strong class="area-title">Direito Tributário</strong><br/><br/>
+<span class="bullet-title bullet-title-gold">• Consultoria Tributária</span><br/><br/>
         Interpretação e aplicação da legislação tributária, com orientação quanto ao correto cumprimento das obrigações
-        fiscais e análise da incidência tributária sobre operações e atividades.<br><br>
-
-        <strong>• Planejamento Tributário Lícito</strong><br>
+        fiscais e análise da incidência tributária sobre operações e atividades.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Planejamento Tributário Lícito</span><br/><br/>
         Análise da estrutura empresarial e das operações realizadas, visando organização fiscal eficiente, sempre em
-        conformidade com a legislação vigente.<br><br>
-
-        <strong>• Contencioso Administrativo Tributário</strong><br>
-        Atuação em processos administrativos fiscais, incluindo autos de infração, impugnações e recursos.<br><br>
-
-        <strong>• Contencioso Judicial Tributário</strong><br>
-        Representação em ações judiciais envolvendo discussões tributárias, cobranças fiscais e execuções.<br><br>
-
-        <strong>• Reforma Tributária</strong><br>
+        conformidade com a legislação vigente.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Contencioso Administrativo Tributário</span><br/><br/>
+        Atuação em processos administrativos fiscais, incluindo autos de infração, impugnações e recursos.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Contencioso Judicial Tributário</span><br/><br/>
+        Representação em ações judiciais envolvendo discussões tributárias, cobranças fiscais e execuções.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Reforma Tributária</span><br/><br/>
         Acompanhamento das alterações legislativas e orientação durante o período de transição normativa.
       </div>
-
-      <div class="block">
-        <strong>Direito de Família e Sucessões</strong><br><br>
-
-        <strong>• Inventário e Partilha</strong><br>
+<div class="block">
+<strong class="area-title">Direito de Família e Sucessões</strong><br/><br/>
+<span class="bullet-title bullet-title-gold">• Inventário e Partilha</span><br/><br/>
         Atuação em inventários judiciais e extrajudiciais, com organização documental, apuração patrimonial e regularização
-        de bens e direitos.<br><br>
-
-        <strong>• Testamentos</strong><br>
-        Orientação, elaboração e análise de disposições testamentárias, conforme a legislação civil.<br><br>
-
-        <strong>• Herança</strong><br>
-        Esclarecimento dos direitos sucessórios de herdeiros, cônjuge ou companheiro.<br><br>
-
-        <strong>• Planejamento Sucessório</strong><br>
-        Estruturação patrimonial em vida, com atenção aos aspectos civis e tributários.<br><br>
-
-        <strong>• Divórcio e Questões de Família</strong><br>
+        de bens e direitos.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Testamentos</span><br/><br/>
+        Orientação, elaboração e análise de disposições testamentárias, conforme a legislação civil.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Herança</span><br/><br/>
+        Esclarecimento dos direitos sucessórios de herdeiros, cônjuge ou companheiro.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Planejamento Sucessório</span><br/><br/>
+        Estruturação patrimonial em vida, com atenção aos aspectos civis e tributários.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Divórcio e Questões de Família</span><br/><br/>
         Atuação em divórcios judiciais e extrajudiciais, regimes de bens e partilha patrimonial.
       </div>
-
-      <div class="block">
-        <strong>Direito Imobiliário e Registral</strong><br><br>
-
-        <strong>• Due Diligence Imobiliária</strong><br>
-        Análise documental e registral de imóveis, com verificação da cadeia dominial, ônus e riscos jurídicos.<br><br>
-
-        <strong>• Retificação de Área</strong><br>
-        Atuação em procedimentos administrativos ou judiciais para correção de medidas e descrições do imóvel.<br><br>
-
-        <strong>• Desmembramento e Georreferenciamento</strong><br>
-        Orientação e acompanhamento de procedimentos técnicos e registrais aplicáveis.<br><br>
-
-        <strong>• Regularização Fundiária Urbana – REURB</strong><br>
-        Atuação em procedimentos de regularização fundiária, com acompanhamento jurídico completo.<br><br>
-
-        <strong>• Atuação Registral</strong><br>
+<div class="block">
+<strong class="area-title">Direito Imobiliário e Registral</strong><br/><br/>
+<span class="bullet-title bullet-title-gold">• Due Diligence Imobiliária</span><br/><br/>
+        Análise documental e registral de imóveis, com verificação da cadeia dominial, ônus e riscos jurídicos.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Retificação de Área</span><br/><br/>
+        Atuação em procedimentos administrativos ou judiciais para correção de medidas e descrições do imóvel.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Desmembramento e Georreferenciamento</span><br/><br/>
+        Orientação e acompanhamento de procedimentos técnicos e registrais aplicáveis.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Regularização Fundiária Urbana – REURB</span><br/><br/>
+        Atuação em procedimentos de regularização fundiária, com acompanhamento jurídico completo.<br/><br/>
+<span class="bullet-title bullet-title-gold">• Atuação Registral</span><br/><br/>
         Acompanhamento de atos perante cartórios de registro de imóveis, visando segurança jurídica e conformidade registral.
       </div>
-
-    </div>
-  </div>
+</div>
+</div>
 </section>
-
-
-
-<section id="publicacoes">
-  <div class="container">
-    <h2>INFORMATIVOS E PUBLICAÇÕES</h2>
-    <p class="muted">
+<section class="section" id="artigos"><h2>ARTIGOS E CONTEÚDOS INSTITUCIONAIS</h2><p class="section-intro">Conteúdos autorais e materiais de referência produzidos pelo escritório, com abordagem prática e foco em tomada de decisão.</p><div class="cards"><a class="card" href="artigo-01-compliance-trabalhista.html" rel="noopener" target="_blank"><h3>Compliance e Gestão de Riscos Trabalhistas</h3><p>Panorama prático de compliance, auditoria, prevenção de passivos e resposta a fiscalizações.</p></a><a class="card" href="artigo-02-inventario-planejamento-sucessorio.html" rel="noopener" target="_blank"><h3>Inventário Extrajudicial e Planejamento Sucessório</h3><p>Critérios, documentos, ITCMD, riscos e como estruturar uma sucessão eficiente.</p></a><a class="card" href="artigo-03-imobiliario-registral.html" rel="noopener" target="_blank"><h3>Direito Imobiliário e Registral</h3><p>Due diligence, regularização, REURB, retificação e estratégias para segurança registral.</p></a><a class="card" href="artigo-04-reforma-tributaria-planejamento.html" rel="noopener" target="_blank"><h3>Reforma Tributária e Planejamento</h3><p>Leitura estratégica dos impactos e caminhos de adaptação: compliance, preços e estrutura.</p></a></div></section><section id="informativos">
+<div class="container">
+<h2>INFORMATIVOS E PUBLICAÇÕES</h2>
+<p class="muted">
       Seleção de leituras e portais de referência, organizados pelas áreas de atuação. Os links abaixo direcionam a conteúdos hospedados em veículos externos.
     </p>
-
-    <div class="pub-grid">
-      <a class="pub-card" href="https://www.jota.info/trabalho" target="_blank" rel="noopener noreferrer">
-        <div class="pub-thumb" style="background-image:url('assets/pub1.jpg')"></div>
-        <div class="pub-body">
-          <div class="pub-kicker">Direito do Trabalho</div>
-          <div class="pub-title">Cobertura e análises sobre direito trabalhista</div>
-          <div class="pub-meta">Fonte: JOTA</div>
-        </div>
-      </a>
-
-      <a class="pub-card" href="https://www.jota.info/tudo-sobre/direito-tributario" target="_blank" rel="noopener noreferrer">
-        <div class="pub-thumb" style="background-image:url('assets/pub2.jpg')"></div>
-        <div class="pub-body">
-          <div class="pub-kicker">Direito Tributário</div>
-          <div class="pub-title">Notícias, decisões e temas atuais de tributação</div>
-          <div class="pub-meta">Fonte: JOTA</div>
-        </div>
-      </a>
-
-      <a class="pub-card" href="https://www.migalhas.com.br/depeso/448574/o-papel-do-planejamento-sucessorio-em-cenarios-de-incerteza" target="_blank" rel="noopener noreferrer">
-        <div class="pub-thumb" style="background-image:url('assets/pub3.jpg')"></div>
-        <div class="pub-body">
-          <div class="pub-kicker">Família e Sucessões</div>
-          <div class="pub-title">Leitura sugerida: planejamento sucessório em cenários de incerteza</div>
-          <div class="pub-meta">Fonte: Migalhas</div>
-        </div>
-      </a>
-    </div>
-  </div>
+<div class="pub-grid">
+<a class="pub-card" href="https://www.jota.info/trabalho" rel="noopener noreferrer" target="_blank">
+<div class="pub-thumb" style="background-image:url('assets/pub1.jpg')"></div>
+<div class="pub-body">
+<div class="pub-kicker">Direito do Trabalho</div>
+<div class="pub-title">Cobertura e análises sobre direito trabalhista</div>
+<div class="pub-meta">Fonte: JOTA</div>
+</div>
+</a>
+<a class="pub-card" href="https://www.jota.info/tudo-sobre/direito-tributario" rel="noopener noreferrer" target="_blank">
+<div class="pub-thumb" style="background-image:url('assets/pub2.jpg')"></div>
+<div class="pub-body">
+<div class="pub-kicker">Direito Tributário</div>
+<div class="pub-title">Notícias, decisões e temas atuais de tributação</div>
+<div class="pub-meta">Fonte: JOTA</div>
+</div>
+</a>
+<a class="pub-card" href="https://www.migalhas.com.br/depeso/448574/o-papel-do-planejamento-sucessorio-em-cenarios-de-incerteza" rel="noopener noreferrer" target="_blank">
+<div class="pub-thumb" style="background-image:url('assets/pub3.jpg')"></div>
+<div class="pub-body">
+<div class="pub-kicker">Família e Sucessões</div>
+<div class="pub-title">Leitura sugerida: planejamento sucessório em cenários de incerteza</div>
+<div class="pub-meta">Fonte: Migalhas</div>
+</div>
+</a>
+</div>
+</div>
 </section>
-
-
-<section id="atendimento">
-  <div class="container">
-    <h2>COMO FUNCIONA O ATENDIMENTO</h2>
-    <div class="grid">
-      <div class="block"><strong>1. Contato inicial</strong><br>Análise preliminar da demanda apresentada.</div>
-      <div class="block"><strong>2. Avaliação jurídica</strong><br>Estudo técnico do caso e documentação.</div>
-      <div class="block"><strong>3. Definição da estratégia</strong><br>Orientação clara quanto às possibilidades e limites jurídicos.</div>
-      <div class="block"><strong>4. Atuação</strong><br>Condução judicial ou extrajudicial conforme o caso.</div>
-    </div>
-  </div>
+<section class="section" id="atendimento"><h2>COMO FUNCIONA O ATENDIMENTO</h2><p class="section-intro">Um fluxo simples, transparente e orientado a resultados — com atendimento digital quando conveniente e formalização documental em todas as etapas.</p><div class="cards"><div class="card"><h3>1) Triagem e diagnóstico</h3><p>Coleta objetiva do contexto, documentos essenciais e definição do melhor caminho (consultivo, preventivo ou contencioso).</p></div><div class="card"><h3>2) Estratégia e orçamento</h3><p>Delimitação do escopo, riscos, próximos passos e proposta clara de honorários, com cronograma e responsabilidades.</p></div><div class="card"><h3>3) Execução e acompanhamento</h3><p>Atuação técnica, atualização periódica e entrega de relatórios/documentos. Sempre que possível, com protocolos digitais para ganhar agilidade.</p></div></div></section><section id="contato">
+<div class="container">
+<h2>CONTATO</h2>
+<div class="block">
+      Atendimento mediante agendamento.<br/><br/>
+      E-mail: <a href="mailto:pinheirodasilveira@adv.oabsp.org.br">pinheirodasilveira@adv.oabsp.org.br</a><br/>
+      WhatsApp: <a href="https://wa.me/5519993051250" rel="noopener" target="_blank">+55 (19) 99305-1250</a>
+</div>
+</div>
 </section>
-<section id="contato">
-  <div class="container">
-    <h2>CONTATO</h2>
-    <div class="block">
-      Atendimento mediante agendamento.<br><br>
-      E-mail: <a href="mailto:pinheirodasilveira@adv.oabsp.org.br">pinheirodasilveira@adv.oabsp.org.br</a><br>
-      WhatsApp: <a href="https://wa.me/5519993051250" target="_blank" rel="noopener">+55 (19) 99305-1250</a>
-    </div>
-  </div>
-</section>
-
-
-
-<section id="panorama">
-  <div class="container">
-    <h2>PANORAMA JURÍDICO E ATUALIDADES</h2>
-    <div class="grid">
-      <div class="block">
-        <strong>Direito do Trabalho Empresarial</strong><br><br>
-        Atualizações relevantes sobre compliance trabalhista, decisões dos Tribunais Regionais e do TST,
-        novas interpretações sobre terceirização, jornada, verbas rescisórias e gestão de passivos,
-        a partir de fontes especializadas e veículos jurídicos de referência.
-      </div>
-      <div class="block">
-        <strong>Direito Tributário</strong><br><br>
-        Notícias e análises sobre a Reforma Tributária, decisões do CARF e do STF,
-        alterações normativas e entendimentos administrativos que impactam empresas e contribuintes.
-      </div>
-      <div class="block">
-        <strong>Direito de Família e Sucessões</strong><br><br>
-        Conteúdos informativos sobre inventários, sucessões, testamentos,
-        planejamento sucessório e decisões judiciais relevantes na área familiar.
-      </div>
-      <div class="block">
-        <strong>Direito Imobiliário e Registral</strong><br><br>
-        Atualizações sobre regularização imobiliária, REURB, registros públicos,
-        decisões administrativas e judiciais que afetam a segurança jurídica dos imóveis.
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section id="artigos">
-  <div class="container">
-    <h2>ARTIGOS E CONTEÚDOS INSTITUCIONAIS</h2>
-    <div class="block" style="margin-bottom:18px;">
-      O escritório produz conteúdo autoral com finalidade exclusivamente informativa, voltado à análise prática de temas
-      recorrentes nas áreas de atuação. Os textos buscam esclarecer conceitos jurídicos, apresentar reflexões técnicas e
-      contribuir para a compreensão das implicações legais em situações concretas, em conformidade com o Código de Ética e
-      Disciplina da OAB.
-    </div>
-
-    <div class="grid">
-      <div class="block">
-        <strong>Compliance Trabalhista e Prevenção de Passivos</strong><br><br>
-        <span style="color: rgba(255,255,255,.86);">Como a atuação preventiva protege a empresa e promove segurança jurídica</span><br><br>
-        <a class="btn" href="artigo-01-compliance-trabalhista.html">LER ARTIGO</a>
-      </div>
-
-      <div class="block">
-        <strong>Inventário Extrajudicial e Planejamento Sucessório</strong><br><br>
-        <span style="color: rgba(255,255,255,.86);">Organização patrimonial, segurança jurídica e prevenção de conflitos</span><br><br>
-        <a class="btn" href="artigo-02-inventario-planejamento-sucessorio.html">LER ARTIGO</a>
-      </div>
-
-      <div class="block">
-        <strong>Direito Imobiliário e Registral: regularização e due diligence</strong><br><br>
-        <span style="color: rgba(255,255,255,.86);">Segurança jurídica dos imóveis e mitigação de riscos em operações imobiliárias</span><br><br>
-        <a class="btn" href="artigo-03-imobiliario-registral.html">LER ARTIGO</a>
-      </div>
-
-      <div class="block">
-        <strong>Reforma Tributária e Planejamento Tributário</strong><br><br>
-        <span style="color: rgba(255,255,255,.86);">Adaptação, segurança jurídica e organização fiscal no cenário de transição</span><br><br>
-        <a class="btn" href="artigo-04-reforma-tributaria-planejamento.html">LER ARTIGO</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <footer>
-  Atuação jurídica técnica e responsável, orientada pela ética, pela legalidade e pela eficiência na condução de demandas judiciais e extrajudiciais, nos termos do Código de Ética e Disciplina da OAB.
+  Este site possui caráter exclusivamente informativo, nos termos do Código de Ética e Disciplina da OAB.
   <div class="notice">Não constitui promessa de resultado, captação de clientela ou oferta indiscriminada de serviços.</div>
-  <div class="notice">© <span id="year"></span> Pinheiro da Silveira Advocacia</div>
+<div class="notice">© <span id="year"></span> Pinheiro da Silveira Advocacia</div>
 </footer>
-
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
