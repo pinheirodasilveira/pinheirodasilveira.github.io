@@ -1,0 +1,7 @@
+Como ativar o vídeo no topo:
+1) Baixe um MP4 (royalty-free) e renomeie para hero.mp4
+2) Coloque o arquivo em: assets/hero.mp4
+3) Reabra o index.html
+
+Observação: alguns navegadores antigos (ex.: Internet Explorer) não reproduzem vídeo em autoplay.
+Nesses casos, o site exibirá automaticamente a imagem de fundo (assets/hero.jpg) — já incluída.
