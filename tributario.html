@@ -14,5 +14,24 @@
     Esta página aprofunda a atuação do escritório nesta área específica.
   </div>
 </section>
+
+<script>
+(function(){
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if(!toggle || !links) return;
+
+  toggle.addEventListener('click', function(){
+    links.classList.toggle('open');
+  });
+
+  document.addEventListener('click', function(e){
+    if(!links.classList.contains('open')) return;
+    if(links.contains(e.target) || toggle.contains(e.target)) return;
+    links.classList.remove('open');
+  });
+})();
+</script>
+
 </body>
 </html>

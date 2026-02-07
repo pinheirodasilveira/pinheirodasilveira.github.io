@@ -195,6 +195,66 @@ footer {
 .card h3{color:var(--gold);margin:0 0 8px 0;font-size:1.05rem;line-height:1.3;}
 .card p{margin:0;color:rgba(255,255,255,.9);line-height:1.5;font-size:.96rem;}
 .section-intro{max-width:980px;color:rgba(255,255,255,.9);line-height:1.6;margin:10px 0 0 0;}
+
+/* Responsive navbar (mobile) */
+.navbar{position:relative;}
+.nav-toggle{
+  display:none;
+  background:transparent;
+  border:1px solid rgba(212,175,55,.6);
+  color:#d4af37;
+  padding:10px 12px;
+  border-radius:10px;
+  font-size:18px;
+  cursor:pointer;
+}
+@media (max-width: 980px){
+  .nav-toggle{display:block;margin-left:auto;}
+  .nav-links{
+    position:absolute;
+    top:72px;
+    left:12px;
+    right:12px;
+    display:none;
+    flex-direction:column;
+    gap:10px;
+    background:rgba(0,0,0,.55);
+    border:1px solid rgba(212,175,55,.25);
+    border-radius:14px;
+    padding:14px;
+    backdrop-filter: blur(6px);
+  }
+  .nav-links.open{display:flex;}
+  .nav-links a{width:100%;padding:10px 8px;}
+}
+
+
+/* Hero fallback animation (used if video can't load) */
+.hero{position:relative; overflow:hidden;}
+.hero-content{position:relative; z-index:2;}
+.hero-fallback{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  filter:brightness(.55);
+  animation:heroFrames 12s infinite;
+}
+@keyframes heroFrames{
+  0%, 33%   { background-image:url('assets/hero-frame1.jpg'); }
+  34%, 66%  { background-image:url('assets/hero-frame2.jpg'); }
+  67%, 100% { background-image:url('assets/hero-frame3.jpg'); }
+}
+.hero-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  filter:brightness(.55);
+  z-index:1;
+}
+
 </style>
 </head>
 <body>
@@ -368,5 +428,24 @@ footer {
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 </script>
+
+<script>
+(function(){
+  const toggle = document.getElementById('navToggle');
+  const links = document.getElementById('navLinks');
+  if(!toggle || !links) return;
+
+  toggle.addEventListener('click', function(){
+    links.classList.toggle('open');
+  });
+
+  document.addEventListener('click', function(e){
+    if(!links.classList.contains('open')) return;
+    if(links.contains(e.target) || toggle.contains(e.target)) return;
+    links.classList.remove('open');
+  });
+})();
+</script>
+
 </body>
 </html>
