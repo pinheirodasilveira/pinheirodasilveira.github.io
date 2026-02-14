@@ -1,0 +1,2 @@
+/* Compat layer: páginas internas já referenciam /styles.css */
+@import url('assets/styles.css');
